@@ -87,7 +87,7 @@ function TodoScreen() {
           <Text style={[styles.taskText, item.completed && styles.completedTask]}>
             {item.text}
           </Text>
-          <Text style={styles.dueDateText}> Due: {new Date(item.dueDate).toLocaleDateString('en-US', {
+          <Text style={styles.dueDateText}>Due: {new Date(item.dueDate).toLocaleDateString('en-US', {
               weekday: 'long',
               year: 'numeric',
               month: 'long',
@@ -180,11 +180,11 @@ function TodoScreen() {
         </View>
         <View style={styles.keyItem}>
           <View style={styles.dueTomorrowOrTodayIndicator} />
-          <Text style={styles.keyText}>Upcoming Due Date</Text>
+          <Text style={styles.keyText}>Due Soon</Text>
         </View>
       </View>
       <TouchableOpacity style={styles.clearButton} onPress={clearAllTasks}>
-        <Text style={styles.clearButtonText}>Clear All Tasks</Text>
+        <Text style={styles.clearButtonText}>CLEAR ALL</Text>
       </TouchableOpacity>
       {isConfettiVisible && (
         <ConfettiCannon count={200} origin={{ x: 0, y: 0 }} fadeOut={true} />
